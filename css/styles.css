@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Hind:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-emerald: #059669;
+  --primary-teal: #0D9488;
+  --primary-dark: #0F172A;
+  --bg-light: #F8FAFC;
+  --card-light: #FFFFFF;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+  --accent-light: #F0FDF4;
+  --accent-border: #BBF7D0;
+}
+
+.dark {
+  --primary-emerald: #10B981;
+  --primary-teal: #14B8A6;
+  --primary-dark: #F8FAFC;
+  --bg-light: #0B1329;
+  --card-light: #152238;
+  --text-dark: #F1F5F9;
+  --text-muted: #94A3B8;
+  --border-light: #1E293B;
+  --accent-light: #064E3B;
+  --accent-border: #047857;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Hind', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Glassmorphism Header & Cards */
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+}
+.dark .glass-header {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.glass-card {
+  background: var(--card-light);
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+.glass-card:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Indian Healthcare Theme Accents */
+.hero-gradient {
+  background: linear-gradient(135deg, #059669 0%, #0D9488 50%, #0284C7 100%);
+}
+
+.card-gradient-emerald {
+  background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%);
+  border: 1px solid #A7F3D0;
+}
+.dark .card-gradient-emerald {
+  background: linear-gradient(135deg, #064E3B 0%, #022C22 100%);
+  border: 1px solid #047857;
+}
+
+.card-gradient-amber {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1px solid #FDE68A;
+}
+.dark .card-gradient-amber {
+  background: linear-gradient(135deg, #78350F 0%, #451A03 100%);
+  border: 1px solid #B45309;
+}
+
+.card-gradient-rose {
+  background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+  border: 1px solid #FECDD3;
+}
+.dark .card-gradient-rose {
+  background: linear-gradient(135deg, #881337 0%, #4C0519 100%);
+  border: 1px solid #BE123C;
+}
+
+/* Badge Pills */
+.badge-emerald {
+  background-color: #D1FAE5;
+  color: #065F46;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+.dark .badge-emerald {
+  background-color: #064E3B;
+  color: #6EE7B7;
+}
+
+.badge-amber {
+  background-color: #FEF3C7;
+  color: #92400E;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+.dark .badge-amber {
+  background-color: #78350F;
+  color: #FDE68A;
+}
+
+.badge-rose {
+  background-color: #FFE4E6;
+  color: #9F1239;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+.dark .badge-rose {
+  background-color: #881337;
+  color: #FECDD3;
+}
+
+.badge-blue {
+  background-color: #E0F2FE;
+  color: #075985;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+.dark .badge-blue {
+  background-color: #075985;
+  color: #BAE6FD;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.03); }
+}
+
+.pulse-emergency {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+/* Map Popup Styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  padding: 4px !important;
+}
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+}

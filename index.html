@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwasthyaSetu AI — Bharat's Rural & Tier-3/4 Healthcare Intelligence Platform</title>
+  <meta name="description" content="WhyCode_4U Hackathon 2026 Theme: Healthcare for Every Individual. Integrated AI-powered rural healthcare ecosystem connecting Patients, ASHA Workers, PHC/CHC Doctors & District Health Officers.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            teal: {
+              50: '#f0fdfa',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Leaflet CSS & JS for Interactive Rural Healthcare Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Custom CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-white">
+  
+  <!-- Main Header Navigation -->
+  <div id="header-container"></div>
+
+  <!-- App Layout (Sidebar + Main Content Area) -->
+  <div class="flex-1 flex max-w-7xl w-full mx-auto">
+    <!-- Role-Aware Navigation Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Dynamic View Container -->
+    <main id="main-content" class="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto max-w-full">
+      <!-- Dynamic Views render here -->
+    </main>
+  </div>
+
+  <!-- Interactive Modals & Notification Center -->
+  <div id="modals-container"></div>
+
+  <!-- Application Entry Script (ES Module) -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
