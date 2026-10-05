@@ -1,6 +1,7 @@
 # 🏥 SwasthyaSetu AI — Bharat's Rural & Tier-3/4 Healthcare Intelligence Platform
 
 > **WhyCode_4U Hackathon 2026** — Theme: *"Healthcare for Every Individual"*  
+> 🌐 **Live Vercel Site**: [https://swasthyasetuai-rouge.vercel.app/](https://swasthyasetuai-rouge.vercel.app/)  
 > 🔗 **GitHub Repository**: [https://github.com/Omtripathi1004/swasthya-setu-ai](https://github.com/Omtripathi1004/swasthya-setu-ai)  
 > 🚀 **Deploy on Vercel**: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOmtripathi1004%2Fswasthya-setu-ai)
 
@@ -48,7 +49,7 @@ Integrates verified open government metadata from:
 
 - **Frontend**: HTML5, Vanilla JavaScript (ES Modules), Tailwind CSS, Lucide Icons, Leaflet Maps.
 - **Design System**: KrishiMitra inspired UX, Glassmorphic Headers, Custom Dark/Light Mode, Plus Jakarta Sans.
-- **Deployment**: Static SPA architecture ready for **Vercel** and **GitHub Pages**.
+- **Deployment**: Live on **Vercel** (`https://swasthyasetuai-rouge.vercel.app/`) and **GitHub**.
 
 ---
 
@@ -66,11 +67,3 @@ python -m http.server 8000
 ```
 
 Open `http://localhost:8000` in your web browser.
-
----
-
-## 🌐 Deploying to Vercel
-
-1. Import `https://github.com/Omtripathi1004/swasthya-setu-ai` into your [Vercel Dashboard](https://vercel.com/new).
-2. Keep default build settings (Framework Preset: **Other** / Static HTML).
-3. Click **Deploy**!
