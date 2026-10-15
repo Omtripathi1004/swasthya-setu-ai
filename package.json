@@ -1,0 +1,30 @@
+{
+  "name": "whycode",
+  "version": "1.0.0",
+  "description": "> **WhyCode_4U Hackathon 2026** — Theme: *\"Healthcare for Every Individual\"*   > 🌐 **Live Vercel Site**: [https://swasthyasetuai-rouge.vercel.app/](https://swasthyasetuai-rouge.vercel.app/)   > 🔗 **GitHub Repository**: [https://github.com/Omtripathi1004/swasthya-setu-ai](https://github.com/Omtripathi1004/swasthya-setu-ai)   > 🚀 **Deploy on Vercel**: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOmtripathi1004%2Fswasthya-setu-ai)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omtripathi1004/swasthya-setu-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Omtripathi1004/swasthya-setu-ai/issues"
+  },
+  "homepage": "https://github.com/Omtripathi1004/swasthya-setu-ai#readme",
+  "devDependencies": {
+    "eslint": "^10.12.0",
+    "jest": "^30.5.2",
+    "prettier": "^3.9.9"
+  }
+}

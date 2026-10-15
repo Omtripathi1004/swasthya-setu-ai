@@ -441,6 +441,18 @@ export const ASHA_HOUSEHOLD_VISITS = [
 
 export const GOVERNMENT_DATA_SOURCES = [
   {
+    id: 'DS_TINYFISH',
+    name: 'TinyFish Search & Fetch API (Web Discovery Service)',
+    publisher: 'TinyFish (https://docs.tinyfish.ai)',
+    datasetName: 'Live Public Healthcare Facility Directory & Scheme Extractor',
+    lastUpdated: '2026-10-15',
+    dataStatus: 'Live Web Extraction API (Server-Side)',
+    coverage: 'Pan-India / Uttar Pradesh Public Domains (*.gov.in, *.nic.in)',
+    accessUrl: 'https://docs.tinyfish.ai',
+    apiStatus: 'Active via Server Proxy (/api/healthcare-resources/search)',
+    description: 'Enables real-time discovery of public PHCs, CHCs, hospitals and Jan Aushadhi stores from official directories with source URL provenance. Enforces zero PHI transfer and strict SSRF domain allowlists.'
+  },
+  {
     id: 'DS_01',
     name: 'National Health Mission (NHM) HMIS Portal',
     publisher: 'Ministry of Health and Family Welfare (MoHFW), Govt of India',

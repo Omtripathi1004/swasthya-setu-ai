@@ -41,23 +41,31 @@ export function renderDashboardView() {
               : 'AI-powered healthcare access for every village, family and individual. Empowering ASHA workers, PHC doctors, and district health officers with real-time decision support.'}
           </p>
 
-          <!-- Quick Action Buttons -->
-          <div class="pt-3 flex flex-wrap gap-3">
-            <button id="dash-btn-start-triage" class="bg-white hover:bg-emerald-50 text-emerald-950 font-bold px-4 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition flex items-center gap-2 text-xs sm:text-sm">
-              <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i>
-              ${isHindi ? 'एआई स्मार्ट ट्रियाज जांच करें' : 'Start AI Smart Triage'}
+          <!-- 3 Core Primary Actions (Safety Triage, Public Resources via TinyFish, ASHA Workspace) + Emergency SOS -->
+          <div class="pt-3 flex flex-wrap gap-2.5">
+            <button id="dash-btn-start-triage" class="bg-white hover:bg-emerald-50 text-emerald-950 font-extrabold px-4 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition flex items-center gap-2 text-xs sm:text-sm">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+              ${isHindi ? '1. आगे क्या करें जांचें (ट्रियाज)' : '1. Check What To Do Next'}
             </button>
 
-            <button id="dash-btn-emergency-sos" class="bg-rose-600 hover:bg-rose-700 text-white font-extrabold px-4 py-2.5 rounded-xl shadow-lg transition flex items-center gap-2 text-xs sm:text-sm pulse-emergency">
+            <button id="dash-btn-open-map" class="bg-teal-700 hover:bg-teal-600 text-white font-extrabold px-4 py-2.5 rounded-xl shadow-lg transition flex items-center gap-2 text-xs sm:text-sm border border-teal-400/30">
+              <i data-lucide="compass" class="w-4 h-4 text-teal-200"></i>
+              ${isHindi ? '2. स्वास्थ्य संसाधन खोजें (TinyFish)' : '2. Find Healthcare Resources'}
+            </button>
+
+            <button id="dash-btn-open-asha" class="bg-emerald-900/80 hover:bg-emerald-800 text-white font-bold px-4 py-2.5 rounded-xl border border-white/20 transition flex items-center gap-2 text-xs sm:text-sm">
+              <i data-lucide="smartphone" class="w-4 h-4 text-emerald-300"></i>
+              ${isHindi ? '3. आशा/एएनएम वर्कस्पेस' : '3. ASHA/ANM Workspace'}
+            </button>
+
+            <button id="dash-btn-emergency-sos" class="bg-rose-600 hover:bg-rose-700 text-white font-extrabold px-4 py-2.5 rounded-xl shadow-lg transition flex items-center gap-2 text-xs sm:text-sm pulse-emergency ml-auto">
               <i data-lucide="siren" class="w-4 h-4"></i>
-              ${isHindi ? '108 आपातकालीन एम्बुलेंस SOS' : '108 Emergency SOS'}
-            </button>
-
-            <button id="dash-btn-open-map" class="bg-emerald-900/60 hover:bg-emerald-900/80 text-white font-semibold px-4 py-2.5 rounded-xl border border-white/20 transition flex items-center gap-2 text-xs sm:text-sm">
-              <i data-lucide="map-pin" class="w-4 h-4 text-teal-300"></i>
-              ${isHindi ? 'निकटतम स्वास्थ्य केंद्र खोजें' : 'Find Nearby Healthcare Map'}
+              ${isHindi ? '108 आपातकालीन SOS' : '108 Emergency SOS'}
             </button>
           </div>
+          <p class="text-[11px] text-emerald-200/80 italic pt-1">
+            ⚠️ Clinical Notice: Non-diagnostic care navigator. Red flags trigger immediate 108 emergency protocol.
+          </p>
         </div>
       </div>
 
@@ -301,6 +309,10 @@ export function attachDashboardEvents() {
 
   document.getElementById('dash-btn-open-map')?.addEventListener('click', () => {
     state.setActiveTab('map');
+  });
+
+  document.getElementById('dash-btn-open-asha')?.addEventListener('click', () => {
+    state.setActiveTab('asha-app');
   });
 
   document.getElementById('dash-btn-view-equity')?.addEventListener('click', () => {

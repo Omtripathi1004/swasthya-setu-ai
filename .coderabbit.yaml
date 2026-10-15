@@ -1,0 +1,44 @@
+# .coderabbit.yaml
+# Configuration file for CodeRabbit (https://coderabbit.ai)
+# This file controls how the CodeRabbit AI bot reviews your pull requests.
+
+language: "en-US"
+early_access: false
+
+reviews:
+  # 'chill' profile makes the AI less strict and more conversational. Other options: 'assertive'
+  profile: "chill"
+  
+  # Set to true to allow the bot to explicitly request changes on PRs.
+  request_changes_workflow: false
+  
+  # Provides a summary of the changes in the PR description.
+  high_level_summary: true
+  
+  # Adds a fun poem about the code changes at the end of the review!
+  poem: true
+  
+  # Updates the status check on GitHub based on the review outcome.
+  review_status: true
+  
+  # Whether to collapse the file-by-file walkthrough in the PR description.
+  collapse_walkthrough: false
+  
+  # Specific instructions for the AI based on file paths.
+  path_instructions:
+    - path: "**/*.js"
+      instructions: |
+        - Ensure modern JavaScript (ES6+) practices are used.
+        - Check that component logic is well-structured and comments are clear.
+        - Prioritize readability and performance.
+    - path: "**/*.css"
+      instructions: |
+        - Ensure vanilla CSS is used without unnecessary duplication.
+        - Check for responsive design best practices.
+    - path: "**/*.html"
+      instructions: |
+        - Ensure semantic HTML and accessibility (a11y) best practices are followed.
+
+chat:
+  # Allows you to chat with the bot in PR comments.
+  auto_reply: true
